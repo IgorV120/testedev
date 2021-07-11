@@ -1,2 +1,609 @@
-/* Coloque o CSS neste arquivo */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');body{
+    font-family: 'Abel', serif;
+}
+body{
+    max-width: 1170px;
+}
+div{
+    width: 100%;
+    height: 200px;
+    
+}
+.topo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11%;
+    width: 100%;
+}
+.topo > div {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+}
+.pesquisa{
+    width: 35%;
+}
+.pesquisa, .campopesquisa{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;   
+}
+.campopesquisa{
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 20%;
+    border:1px solid rgb(145, 137, 137);
+}
+.campopesquisa *{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    border-radius: 2%;
+    border:1px solid rgb(255, 255, 255);
+}
+.campopesquisa input{
+    width: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-family: 'Abel', serif;
+}
+.campopesquisa img{
+    width: 10%;
+    object-fit: contain;
+}
+
+.campopesquisa img:hover{
+    cursor: pointer;
+}
+.campopesquisa input:focus{
+    border: 2px solid rgb(145, 137, 137);
+    outline:none;
+}
+.campopesquisa input:focus{
+    border: 2px solid #fff;    
+}
+.logo{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.logo > img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+}
+.logo > img:hover{
+    cursor: pointer;
+}
+.perfil-carrinho{
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.perfil-carrinho img{
+    width: 20%;
+    object-fit: fill;
+}
+.perfil-carrinho img:hover{
+    cursor: pointer;
+}
+.menu{
+    background-color: rgb(133, 70, 175);
+    height:10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu > div{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 15%;
+    color:#fff;
+    font-size: 80%;
+}
+.menu > div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.menu > div:hover{
+
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.banner{
+    background-color: #fff;
+    height: 330px;
+    position: relative;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.botoes-banner{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+.botoes-banner > div{
+    width: 45%;
+    display: flex;
+}
+.botao-anterior{
+    justify-content: flex-start;
+}
+.botao-proximo{
+    justify-content: flex-end;
+}
+.botoes-banner > div > img{
+    justify-content: flex-end;
+    height: 20%;
+    width: 5%;
+}
+.botoes-banner > div > img:hover{
+    cursor: pointer;
+}
+
+.categorias{
+    background-color: rgb(243, 152, 33);
+    height:150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categorias > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 30%;
+    margin-left: 1%;
+}
+.categorias > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.categoria-legenda:hover {
+    cursor: pointer;
+    transition:.5s ease;
+    opacity: 0;
+}
+.categoria-legenda:hover .brinquedos{
+    opacity: 1;
+}
+.categoria-legenda{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 23, 23,0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+}
+.categoria-legenda > span{
+    font-weight: 200;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    font-family: 'Questrial', sans-serif;
+}
+
+
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns:100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    height: 5%;
+    width: 100%;
+    color: rgb(94, 92, 92);
+    font-size: 60%;
+    font-weight: 900;
+}
+.produtos{
+    background: rgb(255, 255, 255);
+    height:60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.produto-exibicao{
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 25%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.produto-exibicao:hover{
+    cursor: pointer;
+    font-weight: 800;
+}
+.produto-exibicao:hover .produto-imagem-sobreposto{
+    visibility: visible;
+}
+.produto-imagem img{
+    background-color: #fff;
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+.produto-imagem-sobreposto{
+    width: 100%;
+    height: 75%;
+    background-color: rgba(133, 70, 175, 0.3);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+    font-weight: 800;
+    visibility: hidden;
+}
+.produto-imagem-sobreposto > span{
+    font-weight: 200;
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:rgb(243, 152, 33);
+    font-size: 80%;
+    font-family: 'Questrial', sans-serif;
+    opacity: 1;
+}
+.produto-imagem-sobreposto:hover {
+    cursor: pointer;
+    transition:.5s ease;
+}
+.produto-legenda{
+    margin-top: 12%;
+    height: 30%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-legenda span{
+    text-align: center;
+
+}
+.secao-caes-gatos{
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.caes-gatos{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.caes-gatos > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.caes-gatos > div > img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+.caes-gatos > div > img:hover{
+    cursor: pointer;
+}
+.para-caes{
+    margin-left: 2%;
+}
+.para-caes, .para-gatos{
+    position: relative;
+}
+.para-sobreposto{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 28, 31, 0.3);
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color:#fff;
+    font-weight: 800;
+}
+.para-caes > .para-sobreposto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.para-sobreposto > span{
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 5%;
+    height: 10%;
+    width: 40%;
+    background-color:rgb(243, 152, 33);
+    font-size: 90%;
+    font-family: 'Questrial', sans-serif;
+    opacity: 1;
+}
+.para-sobreposto:hover {
+    cursor: pointer;
+    transition:.5s ease; 
+}
+.info{
+    background-color: rgb(86, 70, 175);
+    width: 100%;
+    height: 350px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 65%;
+    grid-template-rows: 15% 85%;
+}
+.ofertas-info{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(243, 152, 33);
+
+}
+.informe-ofertas{
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.informe-ofertas img{
+    width: 10%;
+    height: 80%;
+    object-fit: contain;
+
+}
+.informe-ofertas span{
+    width: 90%;
+    font-size: 75%;
+}
+.assinatura-news{
+    background-color:rgb(86, 70, 175);
+    color: #fff;
+    display: grid;
+    grid-template-rows: 55% 25%;
+    justify-content: center;
+    align-items: center;
+    margin-top:1%;
+    height: 90%;
+    width: 100%;
+}
+.titulo-news{
+    height: 30%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.descricao-news{
+    width: 100%;
+    font-weight: 200;
+}
+.insercao-dados-news{
+    height: 30%;
+    width: 100%;
+    display: flex;
+}
+.campo-insercao-news{
+    background-color: rgb(86, 70, 175);
+    margin-left: 2%;
+    height: 100%;
+    width: 100%;
+}
+.campo-insercao-news input{
+    border: 2px solid rgb(86, 70, 175);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: rgb(86, 70, 175);
+    width: 95%;
+    color: #fff;
+    font-family: 'Abel', serif;
+
+}
+.campo-insercao-news input:focus{
+    outline: none;
+}
+.btn-envia{
+    margin-left: 1%;
+    background-color: rgb(243, 152, 33);
+    border: 1px solid rgb(243, 152, 33);
+    width: 50%;
+    font-weight: 900;
+    text-decoration:1px rgba(24, 23, 23,0.8);
+    color: #fff;
+     font-family: 'Abel', serif;
+}
+.btn-envia:hover{
+    cursor:pointer;
+}
+.rodape{
+    background: rgb(255, 255, 255);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(131, 130, 130, 0.8);
+    }
+
+.rodape-info{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2%;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 35% 20% 20%;
+
+}
+.rodape-info, 
+.rodape-info-texto,
+.rodape-cards{
+    width: 20%;
+    margin-left: 3%;
+    height: 60%;
+    background: rgb(255, 255, 255);
+}
+.logodaloja{
+    height: 100%;
+    width: 100%;
+}
+.logodaloja img, .redes-sociais img{
+    object-fit: contain;
+}
+.logodaloja img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.redes-sociais{
+    height: 100%;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.redes-sociais img{
+    height: 60%;
+    width: 30%;  
+}
+.logodaloja img:hover, .redes-sociais img:hover{
+    cursor: pointer;
+}
+.informacoes-direitos{
+    height: 80%;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 65% 35%;
+    font-size:  1vw;
+
+
+}
+.endereco{
+    font-size:  0.8vw;
+}
+.rodape-info-texto{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-petstore{
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 100%;
+    font-size: 1vw;
+}
+h5{
+    color:rgb(86, 70, 175);
+    font-weight: 800;
+}
+.info-petstore p{
+    font-family: sans-serif;
+    color: rgba(68, 67, 67, 0.8);
+}
+.rodape-cards{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 70%;
+}
+.bandeiras-cartoes{
+    height: 60%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+.bandeiras-cartoes img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+.bandeiras-cartoes img:hover{
+    cursor: pointer;
+}
+.rodape-autoria{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rodape-autoria img{
+    margin-left: 2%;
+    height: 5%;
+    width: 5%;
+    object-fit: contain;
+}
 

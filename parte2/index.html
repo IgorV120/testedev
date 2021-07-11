@@ -6,12 +6,14 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>PARTE II - Teste de Javascript</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<div class="container">
-		<img src="https://seriedesign.com.br/wp/wp-content/uploads/2019/09/logo_seriedesign.png" style="width: 200px; margin: 30px auto; display: block;" />
+		<img src="https://seriedesign.com.br/wp/wp-content/uploads/2019/09/logo_seriedesign.png"
+			style="width: 200px; margin: 30px auto; display: block;" />
 		<h1>PARTE II - Teste de Javascript</h1>
 		<ul>
 			<li>Essa parte consiste em 10 perguntas;</li>
@@ -20,21 +22,47 @@
 		</ul>
 		<div class="border"></div>
 		<!--- PERGUNTA 1 ---->
-		<p>1) Faça um laço for de 0 a 100 que retorne um array com todos os números que são divisíveis por 7 e exiba no console.</p>
+		<p>1) Faça um laço for de 0 a 100 que retorne um array com todos os números que são divisíveis por 7 e exiba no
+			console.</p>
 
 		<!--- RESPOSTA 1 ---->
 		<script>
 			console.log('resposta 1');
 			//insira a resposta aqui.
+			let number = []
+			for (let i = 0; i < 100; i++) {
+				if (i % 7 == 0) {
+					number.push(i);
+				}
+			}
+			console.log(number)
 		</script>
 
 		<div class="border"></div>
 		<!--- PERGUNTA 2 ---->
-		<p>2)Crie uma função que receba dois parâmetros, o primeiro chamado 'texto' (string) e o segundo chamado 'vezes' (número), com o objetivo retornar uma nova string com o texto repetido quantas vezes foi passado no parâmetro 'vezes', separado por vírgula. Exibir esta nova string no console.</p>
+		<p>2)Crie uma função que receba dois parâmetros, o primeiro chamado 'texto' (string) e o segundo chamado 'vezes'
+			(número), com o objetivo retornar uma nova string com o texto repetido quantas vezes foi passado no
+			parâmetro 'vezes', separado por vírgula. Exibir esta nova string no console.</p>
 		<!--- RESPOSTA 2 ---->
 		<script>
 			console.log('resposta 2');
 			//insira a resposta aqui.
+			let texto = "Olá Mundo";
+			let vezes = 5;
+
+			multiplicaVezes(texto, vezes)
+
+			function multiplicaVezes(texto, vezes) {
+				let resultado = "";
+				for (let i = 0; i < vezes; i++) {
+					if (i != vezes) {
+						resultado += texto + ", ";
+					} else {
+						resultado += texto + "."
+					}
+				}
+				console.log(resultado);
+			}
 		</script>
 
 		<div class="border"></div>
@@ -50,6 +78,9 @@
 		<script>
 			console.log('resposta 3');
 			//insira a resposta aqui.
+			var pai = document.querySelector("#pai");
+			var filho = document.querySelector("#filho");
+			pai.append(filho);
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 4 ---->
@@ -69,15 +100,34 @@
 		<script>
 			console.log('resposta 4');
 			//insira a resposta aqui.
+			var div = document.querySelector("div");
+			var paragrafos = Array.from(document.querySelectorAll("p"));
+
+			for (let i = 0; i < paragrafos.length; i++) {
+				if (i == paragrafos.length - 2) {
+					paragrafos[i].textContent = "Texto alterado"
+				} else if (i == paragrafos.length - 1) {
+					paragrafos[i].classList.add("last")
+				}
+
+			}
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 5 ---->
-		<p>5) Com o uso do operador ternário, faça uma função que recebe uma idade (número) e retorne uma string, no console, com o texto "maior de idade" se o número maior que "18" ou "menor de idade", se o número for menor que "18".</p>
+		<p>5) Com o uso do operador ternário, faça uma função que recebe uma idade (número) e retorne uma string, no
+			console, com o texto "maior de idade" se o número maior que "18" ou "menor de idade", se o número for menor
+			que "18".</p>
 
 		<!--- RESPOSTA 5 ---->
 		<script>
 			console.log('resposta 5');
 			//insira a resposta aqui.
+			verificaIdade(2)
+
+			function verificaIdade(idade) {
+				var resposta = idade > 18 ? "Maior de Idade" : "Menor de Idade";
+				console.log(resposta)
+			}
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 6 ---->
@@ -97,6 +147,12 @@
 				pesoObj: '150g'
 			}
 			//insira a resposta aqui.
+			obj.nomeObj = 'Teclado';
+			obj.pesoObj = '500g';
+
+			var vetorIndexado = Object.entries(obj);
+
+			console.log(vetorIndexado);
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 7 ---->
@@ -111,6 +167,24 @@
 		<script>
 			console.log('resposta 7');
 			//insira a resposta aqui.
+			var frase = "Eu quero trabalhar na Seri.e Design";
+			//a)
+			var fraseReversa = "";
+			for (let i = 0; i < frase.length; i++) {
+				fraseReversa += frase.substring(frase.length - i - 1, frase.length - i);
+			}
+			fraseReversa = fraseReversa.replaceAll(" ", "!")
+			console.log(fraseReversa);
+			//b)
+			var ultimaPalavra = frase.split(" ")
+			console.log(ultimaPalavra[ultimaPalavra.length - 1]);
+			//c)
+			var numChar = frase.replaceAll(" ", "")
+			numChar = numChar.length;
+			console.log(numChar)
+			//d)
+			var tipoVar = typeof (numChar);
+			console.log(tipoVar)
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 8 ---->
@@ -118,7 +192,8 @@
 
 		<pre>&lt;div&gt;&lt;/div&gt;<br>&lt;div&gt;&lt;/div&gt;<br>&lt;div&gt;&lt;/div&gt;<br>&lt;div&gt;&lt;/div&gt;<br>&lt;div&gt;&lt;/div&gt;</pre>
 
-		<p>faça uma função para adicionar o atributo 'data-id' em cada uma das divs, com o valor sendo a posição que se encontra a div na lista. Ex.: &lt;div data-id="2"&gt;</p>.
+		<p>faça uma função para adicionar o atributo 'data-id' em cada uma das divs, com o valor sendo a posição que se
+			encontra a div na lista. Ex.: &lt;div data-id="2"&gt;</p>.
 		<!--- RESPOSTA 8 ---->
 
 		<div></div>
@@ -129,6 +204,13 @@
 		<script>
 			console.log('resposta 8');
 			//insira a resposta aqui.
+			let divs = document.querySelectorAll("div");
+			let i = 1;
+			divs.forEach(adicionarAtributo)
+
+			function adicionarAtributo(div) {
+				div.setAttribute("data-id", i++)
+			}
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 9 ---->
@@ -142,7 +224,8 @@
 		<!--- RESPOSTA 9 ---->
 		<div class="content" style="margin: 20px;">
 			<ul>
-				<li style="list-style: none; padding:10px 0; background: #eee; width: 180px; text-align: center;">Categoria
+				<li style="list-style: none; padding:10px 0; background: #eee; width: 180px; text-align: center;">
+					Categoria
 					<div class="subcontainer">
 						<ul style="display: none;">
 							<li>Subcategoria</li>
@@ -154,6 +237,21 @@
 		<script>
 			console.log('resposta 9');
 			//insira a resposta aqui.
+			let palavra = document.querySelector("li");
+			let listaUl = document.querySelectorAll("ul");
+
+			palavra.addEventListener('click', e => {
+				if (e.target.matches('li')) {
+					e.stopPropagation();
+					listaUl[listaUl.length - 1].style.display = 'block';
+					let divs = document.querySelectorAll('div');
+					divs.forEach(adicionaClasse)
+				}
+			}, { capture: true })
+
+			function adicionaClasse(div) {
+				div.classList.add("active");
+			}
 		</script>
 		<div class="border"></div>
 		<!--- PERGUNTA 10 ---->
@@ -164,7 +262,7 @@
 			function observer() {
 				var target = '';
 				var restSecs = 0;
-				var intervalObserver = setInterval(function() {
+				var intervalObserver = setInterval(function () {
 					target = document.querySelector('footer .content');
 					if ($(target).length >= 1 && restSecs <= 5) {
 						//do something
@@ -182,15 +280,72 @@
 			<li>Observa o código para encontrar o elemento. Caso não encontrado, mais tempo é adicionado. </li>
 			<li>Observa o código até encontrar o elemento. Quando encontrado, faz algo.</li>
 			<li>Cria um intervalo de observação para procurar pelo elemento a cada 5 segundo.</li>
-			<li>Observa o código por 5 segundos para encontrar o elemento. Caso não encontrado, a execução é interrompida.</li>
+			<li>Observa o código por 5 segundos para encontrar o elemento. Caso não encontrado, a execução é
+				interrompida.</li>
 			<li>Observa se encontra mais de 1 elemento, quando encontrado interrompe a execução da função.</li>
 		</ol>
 		<!--- RESPOSTA 10 ---->
 		<div>
-			<p style="color: #F00;">RESPOSTA: </p>
+			<p style="color: #F00;">RESPOSTA: 4 </p>
 		</div>
 	</div>
 </body>
-<style>body {margin: 0;padding: 0;background: #eee;font-family: arial, sans-serif;}.container {background: #FFF;width: 100%;max-width: 1024px;margin: 0 auto;padding: 20px;}.container .border {width: 100%;margin: 40px auto;border-top: 1px solid #999;}.container h1 {font-size: 18px;text-align: center;margin: 30px;}.container ol,.container ul {margin: 0 20px;}.container p {font-size: 13px;line-height: 22px;padding: 0 30px;}.container li {font-size: 13px;line-height: 22px;}.container pre {background: #eee;border: 1px solid #000;padding: 15px;color: #000;margin: 20px auto;width: 70%;}.container pre code {margin: 0;}
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		background: #eee;
+		font-family: arial, sans-serif;
+	}
+
+	.container {
+		background: #FFF;
+		width: 100%;
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	.container .border {
+		width: 100%;
+		margin: 40px auto;
+		border-top: 1px solid #999;
+	}
+
+	.container h1 {
+		font-size: 18px;
+		text-align: center;
+		margin: 30px;
+	}
+
+	.container ol,
+	.container ul {
+		margin: 0 20px;
+	}
+
+	.container p {
+		font-size: 13px;
+		line-height: 22px;
+		padding: 0 30px;
+	}
+
+	.container li {
+		font-size: 13px;
+		line-height: 22px;
+	}
+
+	.container pre {
+		background: #eee;
+		border: 1px solid #000;
+		padding: 15px;
+		color: #000;
+		margin: 20px auto;
+		width: 70%;
+	}
+
+	.container pre code {
+		margin: 0;
+	}
 </style>
+
 </html>
